@@ -17,10 +17,10 @@ export const Description = styled.div`
 `;
 
 export const AvatarWrapper = styled.div`
+  margin-bottom: 30px;
   width: 120px;
   border: 1px solid #000;
   border-radius: 50%;
-
   overflow: hidden;
 `;
 

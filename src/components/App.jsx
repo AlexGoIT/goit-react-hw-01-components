@@ -1,4 +1,5 @@
 import { Container } from './Container/Container';
+import { Section } from './Section/Section';
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
 
@@ -9,15 +10,21 @@ import data from '../data/data.json';
 
 export function App() {
   return (
-    <Container>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Statistics data={data} />
-    </Container>
+    <>
+      <Section>
+        <Container>
+          <Profile
+            username={user.username}
+            tag={user.tag}
+            location={user.location}
+            avatar={user.avatar}
+            stats={user.stats}
+          />
+        </Container>
+      </Section>
+      <Section>
+        <Statistics title="Upload stats" stats={data} />
+      </Section>
+    </>
   );
 }

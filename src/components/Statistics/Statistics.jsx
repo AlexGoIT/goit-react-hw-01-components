@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
+import { Title, List } from './Statistics.styled';
 
-export default function Statistics({ data }) {
+export default function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-
-      <ul className="stat-list">{createList(data)}</ul>
-    </section>
+    <>
+      <Title>{title}</Title>
+      <List>{createList(stats)}</List>
+    </>
   );
 }
 
-function createList(data) {
-  return data.map(item => {
+function createList(stats) {
+  return stats.map(item => {
     return (
       <li className="item" key={item.id}>
         <span className="label">{item.label}</span>
@@ -22,7 +22,7 @@ function createList(data) {
 }
 
 Statistics.propTypes = {
-  data: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
