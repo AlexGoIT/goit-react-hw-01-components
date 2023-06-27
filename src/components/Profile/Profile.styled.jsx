@@ -19,9 +19,9 @@ export const Description = styled.div`
 export const AvatarWrapper = styled.div`
   margin-bottom: 30px;
   width: 120px;
-  border: 1px solid #000;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2);
 `;
 
 export const Avatar = styled.img`

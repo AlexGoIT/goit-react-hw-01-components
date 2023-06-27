@@ -1,27 +1,37 @@
 import PropTypes from 'prop-types';
-import { Title, List } from './Statistics.styled';
+import {
+  StatWrapper,
+  Title,
+  List,
+  Item,
+  Label,
+  Percentage,
+} from './Statistics.styled';
 
 export default function Statistics({ title, stats }) {
+  const createList = stats => {
+    return stats.map(item => {
+      const { id, label, percentage } = item;
+
+      return (
+        <Item key={id}>
+          <Label>{label}</Label>
+          <Percentage>{percentage}%</Percentage>
+        </Item>
+      );
+    });
+  };
+
   return (
-    <>
+    <StatWrapper>
       <Title>{title}</Title>
       <List>{createList(stats)}</List>
-    </>
+    </StatWrapper>
   );
 }
 
-function createList(stats) {
-  return stats.map(item => {
-    return (
-      <li className="item" key={item.id}>
-        <span className="label">{item.label}</span>
-        <span className="percentage">{item.percentage}%</span>
-      </li>
-    );
-  });
-}
-
 Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
