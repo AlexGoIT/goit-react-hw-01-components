@@ -17,6 +17,11 @@ export const FriendListItem = styled.li`
 
 export const Status = styled.span`
   display: flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: ${({ isOnline }) => (isOnline ? '#009908' : '#d60505')};
 `;
 
 export const Avatar = styled.img`

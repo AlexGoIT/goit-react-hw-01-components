@@ -6,6 +6,7 @@ export const StatWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 4px;
 
   border: 1px solid #737373;
 `;

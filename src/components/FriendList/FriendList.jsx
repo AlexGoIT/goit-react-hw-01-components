@@ -14,7 +14,7 @@ export default function FriendList({ friends }) {
 
       return (
         <FriendListItem key={id}>
-          <Status className="status">{isOnline ? 'online' : 'offline'}</Status>
+          <Status className="status" isOnline={isOnline}></Status>
           <Avatar
             className="avatar"
             src={avatar}
