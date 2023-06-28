@@ -9,6 +9,7 @@ import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
 
 export function App() {
+  document.title = 'Homework 1';
   return (
     <>
       <Profile
