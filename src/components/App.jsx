@@ -1,5 +1,3 @@
-import Section from './Section/Section';
-import { Container } from './Container/Container';
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
@@ -13,26 +11,16 @@ import transactions from '../data/transactions.json';
 export function App() {
   return (
     <>
-      <Section>
-        <Container>
-          <Profile
-            username={user.username}
-            tag={user.tag}
-            location={user.location}
-            avatar={user.avatar}
-            stats={user.stats}
-          />
-        </Container>
-      </Section>
-      <Section>
-        <Statistics title="Upload stats" stats={data} />
-      </Section>
-      <Section>
-        <FriendList friends={friends} />
-      </Section>
-      <Section>
-        <TransactionHistory items={transactions} />
-      </Section>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 }

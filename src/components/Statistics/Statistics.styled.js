@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const StatWrapper = styled.div`
-  margin: auto;
+  margin: 30px auto;
   width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 4px;
-
-  border: 1px solid #737373;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
 `;
 
 export const Title = styled.h2`
@@ -25,7 +24,6 @@ export const List = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #f3f6f9;
 `;
 
@@ -36,13 +34,16 @@ export const Item = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border: 1px solid #737373;
+  color: #fff;
+  background-color: ${p =>
+    `#${Math.floor(Math.random() * 16777215).toString(16)}`};
 `;
 
 export const Label = styled.span`
   padding: 5px;
-  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
+  color: #303030;
 `;
 
 export const Percentage = styled.span`

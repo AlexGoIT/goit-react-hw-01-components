@@ -8,11 +8,9 @@ import {
 } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
-  const createList = friends => {
-    return friends.map(friend => {
-      const { id, name, isOnline, avatar } = friend;
-
-      return (
+  return (
+    <List className="friend-list">
+      {friends.map(({ id, name, isOnline, avatar }) => (
         <FriendListItem key={id}>
           <Status className="status" isOnline={isOnline}></Status>
           <Avatar
@@ -23,11 +21,9 @@ export default function FriendList({ friends }) {
           />
           <Name className="name">{name}</Name>
         </FriendListItem>
-      );
-    });
-  };
-
-  return <List className="friend-list">{createList(friends)}</List>;
+      ))}
+    </List>
+  );
 }
 
 FriendList.propTypes = {

@@ -7,7 +7,7 @@ import {
   Name,
   Tag,
   Location,
-  Stats,
+  StatsWrapper,
   StatsItem,
   Label,
   Quantity,
@@ -23,6 +23,7 @@ export default function Profile(props) {
   } = props;
 
   return (
+    // Я б тут зробив 2 компоненти але не знаю чи то буде правильно
     <ProfileCard>
       <Description>
         <AvatarWrapper>
@@ -33,7 +34,7 @@ export default function Profile(props) {
         <Location>{location}</Location>
       </Description>
 
-      <Stats>
+      <StatsWrapper>
         <StatsItem>
           <Label>Followers</Label>
           <Quantity>{followers}</Quantity>
@@ -46,7 +47,7 @@ export default function Profile(props) {
           <Label>Likes</Label>
           <Quantity>{likes}</Quantity>
         </StatsItem>
-      </Stats>
+      </StatsWrapper>
     </ProfileCard>
   );
 }

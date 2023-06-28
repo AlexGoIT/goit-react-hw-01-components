@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileCard = styled.div`
-  margin: 0 auto;
+  margin: 30px auto;
   width: 300px;
   border-radius: 5px;
   overflow: hidden;
@@ -12,7 +12,6 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 30px 15px;
 `;
 
@@ -48,7 +47,7 @@ export const Location = styled.p`
   color: #737373;
 `;
 
-export const Stats = styled.ul`
+export const StatsWrapper = styled.ul`
   display: flex;
 `;
 
@@ -56,13 +55,13 @@ export const StatsItem = styled.li`
   display: flex;
   flex-direction: column;
   width: calc(100% / 3);
-  border-top: 1px solid #737373;
   padding: 15px 10px;
-  background-color: #f3f6f9;
+  background-color: #f3f3f3;
   text-align: center;
 
-  :not(:last-child) {
-    border-right: 1px solid #737373;
+  border-top: 1px solid #d3d3d3;
+  &:not(:last-child) {
+    border-right: 1px solid #d3d3d3;
   }
 `;
 
