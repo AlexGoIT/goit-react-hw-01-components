@@ -13,17 +13,14 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export default function Profile(props) {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = props;
-
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
-    // Я б тут зробив 2 компоненти але не знаю чи то буде правильно
     <ProfileCard>
       <Description>
         <AvatarWrapper>
